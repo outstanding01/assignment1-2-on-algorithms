@@ -1,0 +1,70 @@
+First Task :
+
+Write an algorithm that read a sentence, which ends with a point,, character by character to determine:
+
+The number of words in the sentence (assuming that the words are separated by a single space).
+The number of vowels in the sentence.
+You have to keep in mind that:
+
+Each character will be treated separately.
+
+The last character is the point.
+
+Use three variables as counters.
+
+*Solution to the First Task*
+ Initialize three counters: wordCount = 0, vowelCount = 0, isWord = false
+ Read the input sentence character by character until the end:
+   - Initialize a loop variable (i) to 0
+   - Repeat while i is less than the length of the sentence
+     - Read the character at the current position (char)
+     - If char is not a space and not a period (.)
+       - Set isWord to true
+     - If char is a space or a period (.) and isWord is true
+       - Increment wordCount by 1
+       - Set isWord to false
+     - If char is a vowel (a, e, i, o, u, A, E, I, O, U)
+       - Increment vowelCount by 1
+     - Increment i by 1
+ Output "Number of words: " followed by wordCount
+ Output "Number of vowels: " followed by vowelCount
+
+ EndAlgorithm: sumOfDistinctElements(set1, set2)
+
+
+
+
+
+Second Task:
+Description:
+
+Given two sets of elements, find the sum of all distinct elements from the set. In other words, find the sum of all elements which are present in either of the given set.
+Example:
+Set 1 : [3, 1, 7, 9], Set 2: [2, 4, 1, 9, 3]
+Output: 13 (distinct elements 4, 7, 2 )
+Use an array as a method.
+Initialize sum = 0. Compare each element of set one with the second set and if element is not present then add that element to sum. Then do the vice versa to add elements from the second set.
+
+
+*Solution to the Second Task*
+
+Input: Two arrays set1 and set2.
+
+Output: The sum of all distinct elements in the two sets.
+
+Create an empty distinctElements Set to store the distinct elements.
+
+Iterate through each element in set1:
+a. Check if the element is not in set2 using the includes method.
+b. If it's not in set2, add the element to the distinctElements Set.
+
+Iterate through each element in set2:
+a. Check if the element is not in set1 using the includes method.
+b. If it's not in set1, add the element to the distinctElements Set.
+
+Initialize a variable sum to 0 to keep track of the sum of distinct elements.
+
+Iterate through each element in the distinctElements Set:
+a. Add the element to the sum variable.
+
+Return the sum as the result, which represents the sum of all distinct elements in the two sets.
